@@ -9,3 +9,12 @@ async function carregarRanking() {
 
     return response.json();
 }
+
+async function main() {
+    const ranking = await carregarRanking();
+
+    console.log(ranking.gerado_em);
+    console.table(ranking.dados);
+}
+
+main();
