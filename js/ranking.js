@@ -249,12 +249,20 @@ function prepararCampos(unidades, dataAtual) {
    BADGES
    ========================================================= */
 
+const badges = {
+    1: "https://upannpbcdifjlzcohzqp.supabase.co/storage/v1/object/public/images/1place.png",
+    2: "https://upannpbcdifjlzcohzqp.supabase.co/storage/v1/object/public/images/2place.png",
+    3: "https://upannpbcdifjlzcohzqp.supabase.co/storage/v1/object/public/images/3place.png"
+};
+
 function htmlPosicao(posicao) {
     if (posicao >= 1 && posicao <= 3) {
         return `
-            <span class="badge badge-${posicao}">
-                ${posicao}
-            </span>
+            <img
+                class="badge-img badge-${posicao}"
+                src="${badges[posicao]}"
+                alt="${posicao}º lugar"
+            >
         `;
     }
 
@@ -279,6 +287,10 @@ function criarLinha(
             "--cor-linha",
             corGradiente(item.razao)
         );
+    }
+
+    if (posicao >= 1 && posicao <= 3) {
+        tr.classList.add(`top-${posicao}`);
     }
 
     tr.innerHTML = `
