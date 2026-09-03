@@ -2,6 +2,21 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* Ajustes independentes dos 3 primeiros colocados */
+    --top-1-font-size: 1.10em;
+    --top-2-font-size: 1.07em;
+    --top-3-font-size: 1.05em;
+
+    --top-1-row-height: 2.15em;
+    --top-2-row-height: 2.00em;
+    --top-3-row-height: 1.90em;
+
+    --top-1-badge-size: 3.15em;
+    --top-2-badge-size: 2.95em;
+    --top-3-badge-size: 2.85em;
+}
+
 html,
 body {
     margin: 0;
@@ -13,7 +28,6 @@ body {
 
     background: #111;
 }
-
 
 body {
     display: flex;
@@ -30,11 +44,6 @@ body {
 
     width: min(100vw, 900px);
 
-    /*
-        Um pouco mais larga que 9:19,5.
-        Se quiser voltar exatamente:
-        aspect-ratio: 9 / 19.5;
-    */
     aspect-ratio: 9.2 / 19.5;
 
     background-image: url("../assets/background.jpeg");
@@ -52,15 +61,8 @@ body {
 
 .ranking {
     position: absolute;
-
     color: #111;
 }
-
-
-/*
-    As posições abaixo são deliberadamente fáceis
-    de ajustar depois visualmente.
-*/
 
 .ranking-unidades {
     top: 21.9%;
@@ -68,57 +70,78 @@ body {
     width: 89%;
 }
 
-
 .ranking-campos {
     top: 75.1%;
     left: 8%;
     width: 84%;
 }
 
-
 table {
     width: 100%;
 
-    border-collapse: collapse;
+    /* separate permite criar um pequeno filete entre as linhas */
+    border-collapse: separate;
+    border-spacing: 0 1px;
     table-layout: fixed;
 
     font-size: clamp(15px, 1.75vw, 23px);
-}
 
+    background: rgba(255, 255, 255, 0.50);
+    border-radius: 9px;
+    overflow: hidden;
+}
 
 thead {
     font-weight: 700;
 }
 
-
 th,
 td {
-    height: 1.4em;
-
-    padding: 0.15em 0.35em;
-
     text-align: right;
-
     white-space: nowrap;
 }
 
-
 th {
+    height: 1.85em;
+    padding: 0.28em 0.35em;
     font-weight: 700;
 }
 
+td {
+    height: 1.28em;
+    padding: 0.07em 0.35em;
+}
 
+/* Larguras explícitas das colunas */
 .col-posicao {
-    width: 10%;
+    width: 9%;
     text-align: center;
 }
 
-
 .col-nome {
-    width: 26%;
+    width: 25%;
     text-align: left;
 }
 
+.col-novos {
+    width: 11%;
+}
+
+.col-rematricula {
+    width: 15%;
+}
+
+.col-total {
+    width: 11%;
+}
+
+.col-meta {
+    width: 13%;
+}
+
+.col-percentual {
+    width: 16%;
+}
 
 td.nome {
     text-align: left;
@@ -136,21 +159,76 @@ tbody tr {
 
 tbody tr:not(.linha-total) td {
     background: var(--cor-linha);
+}
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+td.posicao {
+    text-align: center;
+    font-weight: 700;
+    overflow: visible;
+}
+
+/* Filete branco translúcido entre linhas */
+tbody tr:not(:last-child) td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+}
+
+/* Arredondamento visual das extremidades */
+thead tr:first-child th:first-child {
+    border-top-left-radius: 9px;
+}
+
+thead tr:first-child th:last-child {
+    border-top-right-radius: 9px;
+}
+
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 9px;
+}
+
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 9px;
 }
 
 
-/*
-    A célula de posição também será usada
-    para acomodar a badge.
-*/
-td.posicao {
-    width: 9%;
-    text-align: center;
-    font-weight: 700;
+/* =========================================================
+   TOP 3
+   ========================================================= */
 
-    overflow: visible;
+tbody tr.top-1 td {
+    font-size: var(--top-1-font-size);
+    height: var(--top-1-row-height);
+}
+
+tbody tr.top-2 td {
+    font-size: var(--top-2-font-size);
+    height: var(--top-2-row-height);
+}
+
+tbody tr.top-3 td {
+    font-size: var(--top-3-font-size);
+    height: var(--top-3-row-height);
+}
+
+.badge-img {
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.22));
+}
+
+.badge-1 {
+    width: var(--top-1-badge-size);
+    height: var(--top-1-badge-size);
+}
+
+.badge-2 {
+    width: var(--top-2-badge-size);
+    height: var(--top-2-badge-size);
+}
+
+.badge-3 {
+    width: var(--top-3-badge-size);
+    height: var(--top-3-badge-size);
 }
 
 
@@ -160,76 +238,6 @@ td.posicao {
 
 td.percentual {
     font-weight: 700;
-
-    /*
-        A cor real é definida no JS.
-    */
-}
-
-
-/* =========================================================
-   BADGES
-   ========================================================= */
-
-.badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 2.45em;
-    height: 2.45em;
-
-    border-radius: 50%;
-
-    font-size: 1em;
-    font-weight: 900;
-
-    border: 2px solid rgba(255, 255, 255, 0.85);
-
-    box-shadow:
-        0 2px 5px rgba(0, 0, 0, 0.28),
-        inset 0 1px 2px rgba(255, 255, 255, 0.7);
-
-    transform: scale(1.08);
-}
-
-
-/*
-    Aqui usamos classes diferentes para possibilitar
-    personalização posterior.
-*/
-
-.badge-1 {
-    background:
-        linear-gradient(
-            145deg,
-            #fff2a5,
-            #dcae26
-        );
-
-    color: #624600;
-}
-
-.badge-2 {
-    background:
-        linear-gradient(
-            145deg,
-            #ffffff,
-            #adb5bd
-        );
-
-    color: #333;
-}
-
-.badge-3 {
-    background:
-        linear-gradient(
-            145deg,
-            #efc59d,
-            #ad6a35
-        );
-
-    color: #542b10;
 }
 
 
@@ -241,7 +249,7 @@ tr.linha-total td {
     font-size: 1.05em;
     font-weight: 800;
 
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.90);
 
     color: #072c76;
 
