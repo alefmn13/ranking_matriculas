@@ -1,0 +1,155 @@
+{
+  "gerado_em": "2026-09-03T11:48:10.032308-03:00",
+  "dados": [
+    {
+      "campo": "ABN",
+      "unidade": "ULB-ABN-CAJ",
+      "novos": 25,
+      "rematricula": 587
+    },
+    {
+      "campo": "ABN",
+      "unidade": "ULB-ABN-EAJA",
+      "novos": 6,
+      "rematricula": 187
+    },
+    {
+      "campo": "MBSO",
+      "unidade": "ULB-MBSO-CALEM",
+      "novos": 6,
+      "rematricula": 116
+    },
+    {
+      "campo": "MBSO",
+      "unidade": "ULB-MBSO-CAVC",
+      "novos": 1,
+      "rematricula": 110
+    },
+    {
+      "campo": "MBSO",
+      "unidade": "ULB-MBSO-EAJ",
+      "novos": 0,
+      "rematricula": 99
+    },
+    {
+      "campo": "MBSO",
+      "unidade": "ULB-MBSO-CAB",
+      "novos": 2,
+      "rematricula": 84
+    },
+    {
+      "campo": "ABAC",
+      "unidade": "ULB-ABAC-CAFS",
+      "novos": 0,
+      "rematricula": 79
+    },
+    {
+      "campo": "MIBES",
+      "unidade": "ULB-MIBES-CADE",
+      "novos": 2,
+      "rematricula": 73
+    },
+    {
+      "campo": "ABS",
+      "unidade": "ULB-ABS-CADI",
+      "novos": 0,
+      "rematricula": 70
+    },
+    {
+      "campo": "AB",
+      "unidade": "ULB-AB-EAP",
+      "novos": 10,
+      "rematricula": 55
+    },
+    {
+      "campo": "AB",
+      "unidade": "ULB-AB-CACB",
+      "novos": 3,
+      "rematricula": 58
+    },
+    {
+      "campo": "AB",
+      "unidade": "ULB-AB-CALF",
+      "novos": 1,
+      "rematricula": 55
+    },
+    {
+      "campo": "AB",
+      "unidade": "ULB-AB-CAS",
+      "novos": 5,
+      "rematricula": 48
+    },
+    {
+      "campo": "CFABA",
+      "unidade": "UNIAENE-CFABA",
+      "novos": 1,
+      "rematricula": 49
+    },
+    {
+      "campo": "MBSO",
+      "unidade": "ULB-MBSO-CAI",
+      "novos": 1,
+      "rematricula": 40
+    },
+    {
+      "campo": "ABN",
+      "unidade": "ULB-ABN-CADIR",
+      "novos": 30,
+      "rematricula": 0
+    },
+    {
+      "campo": "ABAC",
+      "unidade": "ULB-ABAC-CAA",
+      "novos": 1,
+      "rematricula": 20
+    },
+    {
+      "campo": "AB",
+      "unidade": "ULB-AB-CAI",
+      "novos": 6,
+      "rematricula": 14
+    },
+    {
+      "campo": "AB",
+      "unidade": "ULB-AB-CAL",
+      "novos": 2,
+      "rematricula": 16
+    },
+    {
+      "campo": "MIBES",
+      "unidade": "ULB-MIBES-EATF",
+      "novos": 0,
+      "rematricula": 14
+    },
+    {
+      "campo": "AB",
+      "unidade": "ULB-AB-EAA",
+      "novos": 0,
+      "rematricula": 13
+    },
+    {
+      "campo": "ABAC",
+      "unidade": "ULB-ABAC-EASAJ",
+      "novos": 3,
+      "rematricula": 9
+    },
+    {
+      "campo": "MSE",
+      "unidade": "ULB-MSE-CEAA",
+      "novos": 2,
+      "rematricula": 7
+    },
+    {
+      "campo": "ABS",
+      "unidade": "ULB-ABS-EAI",
+      "novos": 1,
+      "rematricula": 7
+    },
+    {
+      "campo": "MSE",
+      "unidade": "ULB-MSE-EAL",
+      "novos": 0,
+      "rematricula": 6
+    }
+  ]
+}
