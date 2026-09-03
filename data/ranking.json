@@ -1,155 +1,180 @@
 {
-  "gerado_em": "2026-09-03T15:37:26.842904-03:00",
+  "gerado_em": "2026-09-03T16:13:41.509215-03:00",
   "dados": [
     {
-      "campo": "ABN",
-      "unidade": "ULB-ABN-CAJ",
-      "novos": 26,
-      "rematricula": 588
+      "EscolaCod": "13421|501",
+      "Campo": "ABN",
+      "Unidade": "ULB-ABN-CAJ",
+      "Novos": 26,
+      "Rematricula": 588
     },
     {
-      "campo": "ABN",
-      "unidade": "ULB-ABN-EAJA",
-      "novos": 6,
-      "rematricula": 187
+      "EscolaCod": "13421|1201",
+      "Campo": "ABN",
+      "Unidade": "ULB-ABN-EAJA",
+      "Novos": 6,
+      "Rematricula": 187
     },
     {
-      "campo": "MBSO",
-      "unidade": "ULB-MBSO-CALEM",
-      "novos": 7,
-      "rematricula": 120
+      "EscolaCod": "4022|1501",
+      "Campo": "MBSO",
+      "Unidade": "ULB-MBSO-CALEM",
+      "Novos": 7,
+      "Rematricula": 121
     },
     {
-      "campo": "MBSO",
-      "unidade": "ULB-MBSO-CAVC",
-      "novos": 1,
-      "rematricula": 114
+      "EscolaCod": "4022|1401",
+      "Campo": "MBSO",
+      "Unidade": "ULB-MBSO-CAVC",
+      "Novos": 1,
+      "Rematricula": 114
     },
     {
-      "campo": "MBSO",
-      "unidade": "ULB-MBSO-EAJ",
-      "novos": 0,
-      "rematricula": 101
+      "EscolaCod": "4022|701",
+      "Campo": "MBSO",
+      "Unidade": "ULB-MBSO-EAJ",
+      "Novos": 0,
+      "Rematricula": 101
     },
     {
-      "campo": "MIBES",
-      "unidade": "ULB-MIBES-CADE",
-      "novos": 2,
-      "rematricula": 93
+      "EscolaCod": "134522|501",
+      "Campo": "MIBES",
+      "Unidade": "ULB-MIBES-CADE",
+      "Novos": 2,
+      "Rematricula": 97
     },
     {
-      "campo": "MBSO",
-      "unidade": "ULB-MBSO-CAB",
-      "novos": 3,
-      "rematricula": 89
+      "EscolaCod": "4022|201",
+      "Campo": "MBSO",
+      "Unidade": "ULB-MBSO-CAB",
+      "Novos": 3,
+      "Rematricula": 89
     },
     {
-      "campo": "ABAC",
-      "unidade": "ULB-ABAC-CAFS",
-      "novos": 0,
-      "rematricula": 81
+      "EscolaCod": "4822|801",
+      "Campo": "ABAC",
+      "Unidade": "ULB-ABAC-CAFS",
+      "Novos": 0,
+      "Rematricula": 82
     },
     {
-      "campo": "ABS",
-      "unidade": "ULB-ABS-CADI",
-      "novos": 1,
-      "rematricula": 72
+      "EscolaCod": "4322|1001",
+      "Campo": "ABS",
+      "Unidade": "ULB-ABS-CADI",
+      "Novos": 1,
+      "Rematricula": 74
     },
     {
-      "campo": "AB",
-      "unidade": "ULB-AB-CACB",
-      "novos": 3,
-      "rematricula": 63
+      "EscolaCod": "4222|601",
+      "Campo": "AB",
+      "Unidade": "ULB-AB-CACB",
+      "Novos": 3,
+      "Rematricula": 63
     },
     {
-      "campo": "AB",
-      "unidade": "ULB-AB-EAP",
-      "novos": 10,
-      "rematricula": 55
+      "EscolaCod": "4222|2201",
+      "Campo": "AB",
+      "Unidade": "ULB-AB-EAP",
+      "Novos": 10,
+      "Rematricula": 55
     },
     {
-      "campo": "AB",
-      "unidade": "ULB-AB-CALF",
-      "novos": 2,
-      "rematricula": 58
+      "EscolaCod": "4222|2701",
+      "Campo": "AB",
+      "Unidade": "ULB-AB-CALF",
+      "Novos": 2,
+      "Rematricula": 58
     },
     {
-      "campo": "AB",
-      "unidade": "ULB-AB-CAS",
-      "novos": 5,
-      "rematricula": 48
+      "EscolaCod": "4222|201",
+      "Campo": "AB",
+      "Unidade": "ULB-AB-CAS",
+      "Novos": 7,
+      "Rematricula": 48
     },
     {
-      "campo": "CFABA",
-      "unidade": "UNIAENE-CFABA",
-      "novos": 1,
-      "rematricula": 52
+      "EscolaCod": "4125-1",
+      "Campo": "CFABA",
+      "Unidade": "UNIAENE-CFABA",
+      "Novos": 1,
+      "Rematricula": 54
     },
     {
-      "campo": "MBSO",
-      "unidade": "ULB-MBSO-CAI",
-      "novos": 1,
-      "rematricula": 42
+      "EscolaCod": "4022|1201",
+      "Campo": "MBSO",
+      "Unidade": "ULB-MBSO-CAI",
+      "Novos": 1,
+      "Rematricula": 42
     },
     {
-      "campo": "ABN",
-      "unidade": "ULB-ABN-CADIR",
-      "novos": 31,
-      "rematricula": 0
+      "EscolaCod": "13421|1231",
+      "Campo": "ABN",
+      "Unidade": "ULB-ABN-CADIR",
+      "Novos": 33,
+      "Rematricula": 0
     },
     {
-      "campo": "AB",
-      "unidade": "ULB-AB-CAI",
-      "novos": 6,
-      "rematricula": 17
+      "EscolaCod": "4222|301",
+      "Campo": "AB",
+      "Unidade": "ULB-AB-CAI",
+      "Novos": 6,
+      "Rematricula": 17
     },
     {
-      "campo": "ABAC",
-      "unidade": "ULB-ABAC-CAA",
-      "novos": 1,
-      "rematricula": 20
+      "EscolaCod": "4822|1301",
+      "Campo": "ABAC",
+      "Unidade": "ULB-ABAC-CAA",
+      "Novos": 1,
+      "Rematricula": 20
     },
     {
-      "campo": "AB",
-      "unidade": "ULB-AB-CAL",
-      "novos": 2,
-      "rematricula": 19
+      "EscolaCod": "4222|401",
+      "Campo": "AB",
+      "Unidade": "ULB-AB-CAL",
+      "Novos": 2,
+      "Rematricula": 19
     },
     {
-      "campo": "MIBES",
-      "unidade": "ULB-MIBES-EATF",
-      "novos": 0,
-      "rematricula": 21
+      "EscolaCod": "134522|601",
+      "Campo": "MIBES",
+      "Unidade": "ULB-MIBES-EATF",
+      "Novos": 0,
+      "Rematricula": 21
     },
     {
-      "campo": "ABAC",
-      "unidade": "ULB-ABAC-EASAJ",
-      "novos": 3,
-      "rematricula": 11
+      "EscolaCod": "4822|1701",
+      "Campo": "ABAC",
+      "Unidade": "ULB-ABAC-EASAJ",
+      "Novos": 3,
+      "Rematricula": 12
     },
     {
-      "campo": "AB",
-      "unidade": "ULB-AB-EAA",
-      "novos": 0,
-      "rematricula": 13
+      "EscolaCod": "4222|501",
+      "Campo": "AB",
+      "Unidade": "ULB-AB-EAA",
+      "Novos": 0,
+      "Rematricula": 13
     },
     {
-      "campo": "ABS",
-      "unidade": "ULB-ABS-EAI",
-      "novos": 2,
-      "rematricula": 8
+      "EscolaCod": "4322|1601",
+      "Campo": "ABS",
+      "Unidade": "ULB-ABS-EAI",
+      "Novos": 2,
+      "Rematricula": 8
     },
     {
-      "campo": "MSE",
-      "unidade": "ULB-MSE-CEAA",
-      "novos": 2,
-      "rematricula": 8
+      "EscolaCod": "4722|201",
+      "Campo": "MSE",
+      "Unidade": "ULB-MSE-CEAA",
+      "Novos": 2,
+      "Rematricula": 8
     },
     {
-      "campo": "MSE",
-      "unidade": "ULB-MSE-EAL",
-      "novos": 0,
-      "rematricula": 6
+      "EscolaCod": "4722|1001",
+      "Campo": "MSE",
+      "Unidade": "ULB-MSE-EAL",
+      "Novos": 0,
+      "Rematricula": 6
     }
   ]
 }
