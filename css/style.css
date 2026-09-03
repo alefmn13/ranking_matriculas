@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    min-height: 100%;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #111;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   PÁGINA
+   ========================================================= */
+
+.page {
+    position: relative;
+
+    width: min(100vw, 900px);
+
+    /*
+        Um pouco mais larga que 9:19,5.
+        Se quiser voltar exatamente:
+        aspect-ratio: 9 / 19.5;
+    */
+    aspect-ratio: 9 / 19.2;
+
+    background-image: url("../assets/background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TABELAS
+   ========================================================= */
+
+.ranking {
+    position: absolute;
+
+    color: #111;
+}
+
+
+/*
+    As posições abaixo são deliberadamente fáceis
+    de ajustar depois visualmente.
+*/
+
+.ranking-unidades {
+    top: 22.4%;
+    left: 5.5%;
+    width: 89%;
+}
+
+
+.ranking-campos {
+    top: 72.8%;
+    left: 8%;
+    width: 84%;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    font-size: clamp(8px, 1.45vw, 14px);
+}
+
+
+thead {
+    font-weight: 700;
+}
+
+
+th,
+td {
+    height: 1.75em;
+
+    padding: 0.15em 0.35em;
+
+    text-align: right;
+
+    white-space: nowrap;
+}
+
+
+th {
+    font-weight: 700;
+}
+
+
+.col-posicao {
+    width: 8%;
+    text-align: center;
+}
+
+
+.col-nome {
+    width: 25%;
+    text-align: left;
+}
+
+
+td.nome {
+    text-align: left;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   LINHAS
+   ========================================================= */
+
+tbody tr {
+    position: relative;
+}
+
+
+tbody td {
+    background: rgba(255, 255, 255, 0.88);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+
+/*
+    A célula de posição também será usada
+    para acomodar a badge.
+*/
+td.posicao {
+    position: relative;
+
+    text-align: center;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   GRADIENTE
+   ========================================================= */
+
+td.percentual {
+    font-weight: 700;
+
+    /*
+        A cor real é definida no JS.
+    */
+}
+
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+
+.badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 1.85em;
+    height: 1.85em;
+
+    border-radius: 50%;
+
+    font-size: 0.85em;
+    font-weight: 800;
+
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.35),
+        inset 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+
+/*
+    Aqui usamos classes diferentes para possibilitar
+    personalização posterior.
+*/
+
+.badge-1 {
+    background: linear-gradient(
+        135deg,
+        #ffe882,
+        #e5ad12
+    );
+
+    color: #563c00;
+}
+
+
+.badge-2 {
+    background: linear-gradient(
+        135deg,
+        #eeeeee,
+        #aeb4ba
+    );
+
+    color: #363b40;
+}
+
+
+.badge-3 {
+    background: linear-gradient(
+        135deg,
+        #e2ad7d,
+        #9c5727
+    );
+
+    color: #45210b;
+}
+
+
+/* =========================================================
+   TOTAL
+   ========================================================= */
+
+tr.linha-total td {
+    font-weight: 800;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-top: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   DATA
+   ========================================================= */
+
+.data-geracao {
+    position: absolute;
+
+    right: 7.5%;
+    bottom: 1.25%;
+
+    font-size: clamp(9px, 1.5vw, 14px);
+    font-weight: 600;
+
+    color: #111;
+}
