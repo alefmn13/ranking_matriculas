@@ -61,7 +61,12 @@
         atualizarEstado();
     }
 
-    botao.addEventListener("click", async () => {
+    botao.addEventListener("click", async event => {
+        // O ranking.js ainda possui o listener antigo. Capturamos o clique aqui
+        // antes dele para evitar que as duas implementações sejam executadas.
+        event.preventDefault();
+        event.stopImmediatePropagation();
+
         const nativoAtivo = Boolean(elementoFullscreenAtual());
         const fallbackAtivo = pagina.classList.contains("fullscreen-fallback");
 
@@ -85,7 +90,7 @@
             console.warn("Fullscreen nativo foi bloqueado. Usando modo expandido como fallback.", erro);
             entrarFallback();
         }
-    });
+    }, true);
 
     document.addEventListener("fullscreenchange", atualizarEstado);
     document.addEventListener("webkitfullscreenchange", atualizarEstado);
