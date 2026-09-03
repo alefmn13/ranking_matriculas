@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-03T15:36:03.566097-03:00",
+  "gerado_em": "2026-09-03T15:37:26.842904-03:00",
   "dados": [
     {
       "campo": "ABN",
@@ -41,7 +41,7 @@
       "campo": "MBSO",
       "unidade": "ULB-MBSO-CAB",
       "novos": 3,
-      "rematricula": 87
+      "rematricula": 89
     },
     {
       "campo": "ABAC",
@@ -83,7 +83,7 @@
       "campo": "CFABA",
       "unidade": "UNIAENE-CFABA",
       "novos": 1,
-      "rematricula": 51
+      "rematricula": 52
     },
     {
       "campo": "MBSO",
