@@ -394,11 +394,51 @@ function renderizarCampos(campos, ulb) {
 
 
 /* =========================================================
+   TELA CHEIA
+   ========================================================= */
+
+function configurarFullscreen() {
+    const botao = document.getElementById("btn-fullscreen");
+
+    if (!botao) {
+        return;
+    }
+
+    botao.addEventListener("click", async () => {
+        try {
+            if (!document.fullscreenElement) {
+                await document.documentElement.requestFullscreen();
+            } else {
+                await document.exitFullscreen();
+            }
+        } catch (erro) {
+            console.error("Não foi possível alternar tela cheia:", erro);
+        }
+    });
+
+    document.addEventListener("fullscreenchange", () => {
+        const ativo = Boolean(document.fullscreenElement);
+
+        botao.classList.toggle("is-fullscreen", ativo);
+
+        const descricao = ativo
+            ? "Sair da tela cheia"
+            : "Abrir em tela cheia";
+
+        botao.title = descricao;
+        botao.setAttribute("aria-label", descricao);
+    });
+}
+
+
+/* =========================================================
    MAIN
    ========================================================= */
 
 async function main() {
     try {
+        configurarFullscreen();
+
         const [ranking, metas] = await Promise.all([
             carregarJson("./data/ranking.json"),
             carregarJson("./data/metas.json")
