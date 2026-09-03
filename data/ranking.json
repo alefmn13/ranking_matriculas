@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-03T17:22:14.371491-03:00",
+  "gerado_em": "2026-09-03T19:20:37.126001-03:00",
   "dados": [
     {
       "EscolaCod": "13421|501",
@@ -13,7 +13,7 @@
       "Campo": "ABN",
       "Unidade": "ULB-ABN-EAJA",
       "Novos": 6,
-      "Rematricula": 187
+      "Rematricula": 188
     },
     {
       "EscolaCod": "4022|1501",
@@ -23,45 +23,45 @@
       "Rematricula": 122
     },
     {
-      "EscolaCod": "4022|1401",
-      "Campo": "MBSO",
-      "Unidade": "ULB-MBSO-CAVC",
-      "Novos": 1,
-      "Rematricula": 117
-    },
-    {
       "EscolaCod": "134522|501",
       "Campo": "MIBES",
       "Unidade": "ULB-MIBES-CADE",
-      "Novos": 2,
-      "Rematricula": 107
+      "Novos": 3,
+      "Rematricula": 123
+    },
+    {
+      "EscolaCod": "4022|1401",
+      "Campo": "MBSO",
+      "Unidade": "ULB-MBSO-CAVC",
+      "Novos": 3,
+      "Rematricula": 120
     },
     {
       "EscolaCod": "4022|701",
       "Campo": "MBSO",
       "Unidade": "ULB-MBSO-EAJ",
       "Novos": 0,
-      "Rematricula": 102
+      "Rematricula": 105
     },
     {
       "EscolaCod": "4022|201",
       "Campo": "MBSO",
       "Unidade": "ULB-MBSO-CAB",
       "Novos": 3,
-      "Rematricula": 89
+      "Rematricula": 90
     },
     {
       "EscolaCod": "4822|801",
       "Campo": "ABAC",
       "Unidade": "ULB-ABAC-CAFS",
-      "Novos": 0,
+      "Novos": 2,
       "Rematricula": 84
     },
     {
       "EscolaCod": "4322|1001",
       "Campo": "ABS",
       "Unidade": "ULB-ABS-CADI",
-      "Novos": 1,
+      "Novos": 2,
       "Rematricula": 75
     },
     {
@@ -69,7 +69,7 @@
       "Campo": "AB",
       "Unidade": "ULB-AB-CACB",
       "Novos": 3,
-      "Rematricula": 63
+      "Rematricula": 64
     },
     {
       "EscolaCod": "4222|2201",
@@ -86,18 +86,18 @@
       "Rematricula": 59
     },
     {
+      "EscolaCod": "4125-1",
+      "Campo": "CFABA",
+      "Unidade": "UNIAENE-CFABA",
+      "Novos": 1,
+      "Rematricula": 55
+    },
+    {
       "EscolaCod": "4222|201",
       "Campo": "AB",
       "Unidade": "ULB-AB-CAS",
       "Novos": 7,
       "Rematricula": 48
-    },
-    {
-      "EscolaCod": "4125-1",
-      "Campo": "CFABA",
-      "Unidade": "UNIAENE-CFABA",
-      "Novos": 1,
-      "Rematricula": 54
     },
     {
       "EscolaCod": "4022|1201",
@@ -114,6 +114,13 @@
       "Rematricula": 0
     },
     {
+      "EscolaCod": "134522|601",
+      "Campo": "MIBES",
+      "Unidade": "ULB-MIBES-EATF",
+      "Novos": 0,
+      "Rematricula": 32
+    },
+    {
       "EscolaCod": "4222|301",
       "Campo": "AB",
       "Unidade": "ULB-AB-CAI",
@@ -121,24 +128,17 @@
       "Rematricula": 17
     },
     {
-      "EscolaCod": "134522|601",
-      "Campo": "MIBES",
-      "Unidade": "ULB-MIBES-EATF",
-      "Novos": 0,
-      "Rematricula": 23
+      "EscolaCod": "4822|1301",
+      "Campo": "ABAC",
+      "Unidade": "ULB-ABAC-CAA",
+      "Novos": 1,
+      "Rematricula": 21
     },
     {
       "EscolaCod": "4222|401",
       "Campo": "AB",
       "Unidade": "ULB-AB-CAL",
       "Novos": 2,
-      "Rematricula": 20
-    },
-    {
-      "EscolaCod": "4822|1301",
-      "Campo": "ABAC",
-      "Unidade": "ULB-ABAC-CAA",
-      "Novos": 1,
       "Rematricula": 20
     },
     {
@@ -159,8 +159,8 @@
       "EscolaCod": "4322|1601",
       "Campo": "ABS",
       "Unidade": "ULB-ABS-EAI",
-      "Novos": 2,
-      "Rematricula": 9
+      "Novos": 3,
+      "Rematricula": 10
     },
     {
       "EscolaCod": "4722|201",
