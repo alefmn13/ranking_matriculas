@@ -35,7 +35,7 @@ body {
         Se quiser voltar exatamente:
         aspect-ratio: 9 / 19.5;
     */
-    aspect-ratio: 9 / 19.2;
+    aspect-ratio: 9.2 / 19.5;
 
     background-image: url("../assets/background.jpeg");
     background-size: 100% 100%;
@@ -109,13 +109,13 @@ th {
 
 
 .col-posicao {
-    width: 8%;
+    width: 10%;
     text-align: center;
 }
 
 
 .col-nome {
-    width: 25%;
+    width: 26%;
     text-align: left;
 }
 
@@ -134,9 +134,8 @@ tbody tr {
     position: relative;
 }
 
-
-tbody td {
-    background: rgba(255, 255, 255, 0.88);
+tbody tr:not(.linha-total) td {
+    background: var(--cor-linha);
 
     border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
@@ -147,10 +146,11 @@ tbody td {
     para acomodar a badge.
 */
 td.posicao {
-    position: relative;
-
+    width: 9%;
     text-align: center;
     font-weight: 700;
+
+    overflow: visible;
 }
 
 
@@ -173,21 +173,24 @@ td.percentual {
 
 .badge {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
 
-    width: 1.85em;
-    height: 1.85em;
+    width: 2.45em;
+    height: 2.45em;
 
     border-radius: 50%;
 
-    font-size: 0.85em;
-    font-weight: 800;
+    font-size: 1em;
+    font-weight: 900;
+
+    border: 2px solid rgba(255, 255, 255, 0.85);
 
     box-shadow:
-        0 1px 3px rgba(0, 0, 0, 0.35),
-        inset 0 1px 1px rgba(255, 255, 255, 0.4);
+        0 2px 5px rgba(0, 0, 0, 0.28),
+        inset 0 1px 2px rgba(255, 255, 255, 0.7);
+
+    transform: scale(1.08);
 }
 
 
@@ -197,35 +200,36 @@ td.percentual {
 */
 
 .badge-1 {
-    background: linear-gradient(
-        135deg,
-        #ffe882,
-        #e5ad12
-    );
+    background:
+        linear-gradient(
+            145deg,
+            #fff2a5,
+            #dcae26
+        );
 
-    color: #563c00;
+    color: #624600;
 }
-
 
 .badge-2 {
-    background: linear-gradient(
-        135deg,
-        #eeeeee,
-        #aeb4ba
-    );
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #adb5bd
+        );
 
-    color: #363b40;
+    color: #333;
 }
 
-
 .badge-3 {
-    background: linear-gradient(
-        135deg,
-        #e2ad7d,
-        #9c5727
-    );
+    background:
+        linear-gradient(
+            145deg,
+            #efc59d,
+            #ad6a35
+        );
 
-    color: #45210b;
+    color: #542b10;
 }
 
 
@@ -234,11 +238,14 @@ td.percentual {
    ========================================================= */
 
 tr.linha-total td {
+    font-size: 1.05em;
     font-weight: 800;
 
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.95);
 
-    border-top: 2px solid rgba(0, 0, 0, 0.25);
+    color: #072c76;
+
+    border-top: 2px solid rgba(5, 53, 143, 0.55);
 }
 
 
@@ -249,11 +256,11 @@ tr.linha-total td {
 .data-geracao {
     position: absolute;
 
-    right: 7.5%;
-    bottom: 1.25%;
+    right: 6.5%;
+    bottom: 0.45%;
 
-    font-size: clamp(9px, 1.5vw, 14px);
-    font-weight: 600;
+    font-size: clamp(10px, 1.55vw, 15px);
+    font-weight: 700;
 
-    color: #111;
+    color: rgba(15, 34, 66, 0.88);
 }

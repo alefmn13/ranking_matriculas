@@ -105,52 +105,37 @@ function calcularRazao(percentualMeta, dataAtual) {
 
 function corGradiente(razao) {
     /*
-        razão:
-        0 = vermelho
-        0.5 = amarelo
-        1 = verde
+        Gradiente pastel:
 
-        Interpolação simples em duas etapas.
+        0   -> vermelho muito suave
+        0.5 -> amarelo muito suave
+        1   -> verde muito suave
     */
 
-    let r;
-    let g;
-    let b;
+    const vermelho = [248, 218, 215];
+    const amarelo  = [250, 239, 194];
+    const verde    = [214, 237, 217];
+
+    let inicio;
+    let fim;
+    let t;
 
     if (razao <= 0.5) {
-
-        const t = razao / 0.5;
-
-        /*
-            vermelho:
-            rgb(244, 67, 54)
-
-            amarelo:
-            rgb(255, 235, 59)
-        */
-
-        r = 244 + (255 - 244) * t;
-        g = 67 + (235 - 67) * t;
-        b = 54 + (59 - 54) * t;
-
+        inicio = vermelho;
+        fim = amarelo;
+        t = razao / 0.5;
     } else {
-
-        const t = (razao - 0.5) / 0.5;
-
-        /*
-            amarelo:
-            rgb(255, 235, 59)
-
-            verde:
-            rgb(76, 175, 80)
-        */
-
-        r = 255 + (76 - 255) * t;
-        g = 235 + (175 - 235) * t;
-        b = 59 + (80 - 59) * t;
+        inicio = amarelo;
+        fim = verde;
+        t = (razao - 0.5) / 0.5;
     }
 
-    return `rgb(${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)})`;
+    const rgb = inicio.map(
+        (valor, i) =>
+            Math.round(valor + (fim[i] - valor) * t)
+    );
+
+    return `rgb(${rgb.join(",")})`;
 }
 
 
@@ -201,14 +186,9 @@ function formatarData(dataIso) {
 
 function siglaCompleta(item) {
 
-    if (item.campo === "UNIAENE") {
-        return `UNIAENE-${item.unidade}`;
+    if (item.unidade === "UNIAENE-CFABA") {
+        return "UNIAENE-CFABA";
     }
-
-    /*
-        Funciona também caso o ranking.json ainda esteja
-        trazendo "ULB-ABN-CAJ" inteiro em unidade.
-    */
 
     if (item.unidade.startsWith("ULB-")) {
         return item.unidade;
@@ -220,28 +200,15 @@ function siglaCompleta(item) {
 
 function nomeExibicaoUnidade(item) {
 
-    /*
-        Se vier:
-        unidade = CAJ
-        retorna CAJ-ABN
-
-        seguindo o layout original do Power BI.
-    */
+    if (item.unidade === "UNIAENE-CFABA") {
+        return "CFABA-UNIAENE";
+    }
 
     if (item.unidade.startsWith("ULB-")) {
 
         const partes = item.unidade.split("-");
 
-        if (partes[0] === "ULB") {
-            return `${partes[2]}-${partes[1]}`;
-        }
-
-        return item.unidade;
-    }
-
-
-    if (item.campo === "UNIAENE") {
-        return `${item.unidade}-${item.campo}`;
+        return `${partes[2]}-${partes[1]}`;
     }
 
     return `${item.unidade}-${item.campo}`;
@@ -299,19 +266,27 @@ function prepararUnidades(dados, metas, dataAtual) {
    CAMPOS
    ========================================================= */
 
+function campoExibicao(item) {
+    if (item.unidade === "UNIAENE-CFABA") {
+        return "UNIAENE";
+    }
+
+    return item.campo;
+}
+
+
 function prepararCampos(unidades, dataAtual) {
 
     const mapa = new Map();
-
+    const nomeCampo = campoExibicao(item);
 
     for (const item of unidades) {
 
-        if (!mapa.has(item.campo)) {
-
+        if (!mapa.has(nomeCampo)) {
             mapa.set(
-                item.campo,
+                nomeCampo,
                 {
-                    campo: item.campo,
+                    campo: nomeCampo,
                     novos: 0,
                     rematricula: 0,
                     total: 0,
@@ -320,8 +295,7 @@ function prepararCampos(unidades, dataAtual) {
             );
         }
 
-
-        const campo = mapa.get(item.campo);
+        const campo = mapa.get(nomeCampo);
 
         campo.novos += Number(item.novos);
 
@@ -389,11 +363,17 @@ function htmlPosicao(posicao) {
 function criarLinha(
     item,
     posicao,
-    propriedadeNome
+    propriedadeNome,
+    usarGradiente = true
 ) {
-
     const tr = document.createElement("tr");
 
+    if (usarGradiente) {
+        tr.style.setProperty(
+            "--cor-linha",
+            corGradiente(item.razao)
+        );
+    }
 
     tr.innerHTML = `
         <td class="posicao">
@@ -420,17 +400,10 @@ function criarLinha(
             ${formatarNumero(item.meta)}
         </td>
 
-        <td
-            class="percentual"
-            style="
-                background-color:
-                    ${corGradiente(item.razao)}
-            "
-        >
+        <td class="percentual">
             ${formatarPercentual(item.percentualMeta)}
         </td>
     `;
-
 
     return tr;
 }
@@ -483,19 +456,18 @@ function calcularULB(unidades, dataAtual) {
    RENDER
    ========================================================= */
 
-function renderizarUnidades(unidades) {
-
+function renderizarUnidades(
+    unidades,
+    ulb
+) {
     const tbody = document.getElementById(
         "tbody-unidades"
     );
 
-
     tbody.innerHTML = "";
-
 
     unidades.forEach(
         (item, index) => {
-
             tbody.appendChild(
                 criarLinha(
                     item,
@@ -503,9 +475,23 @@ function renderizarUnidades(unidades) {
                     "nome"
                 )
             );
-
         }
     );
+
+    const linhaULB = criarLinha(
+        {
+            ...ulb,
+            nome: "ULB"
+        },
+        "",
+        "nome",
+        false
+    );
+
+    linhaULB.classList.add("linha-total");
+    linhaULB.children[0].innerHTML = "";
+
+    tbody.appendChild(linhaULB);
 }
 
 
@@ -540,7 +526,8 @@ function renderizarCampos(
     const linhaULB = criarLinha(
         ulb,
         "",
-        "campo"
+        "campo",
+        false
     );
 
 
@@ -611,7 +598,8 @@ async function main() {
 
 
         renderizarUnidades(
-            unidades
+            unidades,
+            ulb
         );
 
 
