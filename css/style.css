@@ -56,6 +56,111 @@ body {
 
 
 /* =========================================================
+   BOTÃO TELA CHEIA
+   ========================================================= */
+
+.btn-fullscreen {
+    position: absolute;
+    top: 1.55%;
+    right: 3.2%;
+    z-index: 30;
+
+    width: 3.15em;
+    height: 3.15em;
+    padding: 0;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.82);
+    color: #11346f;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    box-shadow:
+        0 5px 14px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.80);
+
+    animation: fullscreen-hint 1.65s cubic-bezier(.2, .75, .35, 1) 1;
+
+    transition:
+        transform 160ms ease,
+        background 160ms ease,
+        box-shadow 160ms ease;
+}
+
+.btn-fullscreen:hover {
+    transform: scale(1.08);
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.20);
+}
+
+.btn-fullscreen:active {
+    transform: scale(0.96);
+}
+
+.fullscreen-icon {
+    position: absolute;
+
+    width: 1.55em;
+    height: 1.55em;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    transition:
+        opacity 160ms ease,
+        transform 220ms ease;
+}
+
+.fullscreen-exit {
+    opacity: 0;
+    transform: scale(0.78);
+}
+
+.btn-fullscreen.is-fullscreen .fullscreen-enter {
+    opacity: 0;
+    transform: scale(1.18);
+}
+
+.btn-fullscreen.is-fullscreen .fullscreen-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes fullscreen-hint {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    17% {
+        transform: scale(1.22);
+    }
+
+    34% {
+        transform: scale(1);
+    }
+
+    52% {
+        transform: scale(1.22);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================================
    TABELAS
    ========================================================= */
 
