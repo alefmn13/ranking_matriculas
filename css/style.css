@@ -65,13 +65,13 @@ body {
 }
 
 .ranking-unidades {
-    top: 21.9%;
-    left: 5.5%;
-    width: 89%;
+    top: 22.2%;
+    left: 5.9%;
+    width: 88.2%;
 }
 
 .ranking-campos {
-    top: 75.1%;
+    top: 74.2%;
     left: 8%;
     width: 84%;
 }
@@ -84,7 +84,7 @@ table {
     border-spacing: 0 1px;
     table-layout: fixed;
 
-    font-size: clamp(15px, 1.75vw, 23px);
+    font-size: clamp(9px, 2.35vw, 22px);
 
     background: rgba(255, 255, 255, 0.50);
     border-radius: 9px;
@@ -102,9 +102,10 @@ td {
 }
 
 th {
-    height: 1.85em;
+    height: 1.4em;
     padding: 0.28em 0.35em;
     font-weight: 700;
+    font-size: 0.85em;
 }
 
 td {
@@ -214,6 +215,7 @@ tbody tr.top-3 td {
     margin: 0 auto;
     object-fit: contain;
     filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.22));
+    transform: translateX(-0.37em);
 }
 
 .badge-1 {
@@ -265,7 +267,7 @@ tr.linha-total td {
     position: absolute;
 
     right: 6.5%;
-    bottom: 0.45%;
+    bottom: 0.15%;
 
     font-size: clamp(10px, 1.55vw, 18px);
     font-weight: 700;
