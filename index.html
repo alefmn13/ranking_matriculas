@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <title>Teste Ranking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ranking de Matrículas</title>
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
-    <h1>Teste do ranking</h1>
+    <main class="page">
+
+        <section class="ranking ranking-unidades">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="col-posicao">#</th>
+                        <th class="col-nome">Unidade</th>
+                        <th>Novos</th>
+                        <th>Rematrícula</th>
+                        <th>Total</th>
+                        <th>Meta</th>
+                        <th>% Meta</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tbody-unidades"></tbody>
+            </table>
+        </section>
+
+
+        <section class="ranking ranking-campos">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="col-posicao">#</th>
+                        <th class="col-nome">Campo</th>
+                        <th>Novos</th>
+                        <th>Rematrícula</th>
+                        <th>Total</th>
+                        <th>Meta</th>
+                        <th>% Meta</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tbody-campos"></tbody>
+            </table>
+        </section>
+
+
+        <div id="data-geracao" class="data-geracao"></div>
+
+    </main>
 
     <script src="./js/ranking.js"></script>
+
 </body>
 </html>
