@@ -246,31 +246,6 @@ function prepararCampos(unidades, dataAtual) {
 
 
 /* =========================================================
-   BADGES
-   ========================================================= */
-
-const badges = {
-    1: "https://upannpbcdifjlzcohzqp.supabase.co/storage/v1/object/public/images/1place.png",
-    2: "https://upannpbcdifjlzcohzqp.supabase.co/storage/v1/object/public/images/2place.png",
-    3: "https://upannpbcdifjlzcohzqp.supabase.co/storage/v1/object/public/images/3place.png"
-};
-
-function htmlPosicao(posicao) {
-    if (posicao >= 1 && posicao <= 3) {
-        return `
-            <img
-                class="badge-img badge-${posicao}"
-                src="${badges[posicao]}"
-                alt="${posicao}º lugar"
-            >
-        `;
-    }
-
-    return posicao;
-}
-
-
-/* =========================================================
    LINHAS
    ========================================================= */
 
@@ -294,7 +269,7 @@ function criarLinha(
     }
 
     tr.innerHTML = `
-        <td class="posicao">${htmlPosicao(posicao)}</td>
+        <td class="posicao">${posicao}</td>
         <td class="nome">${item[propriedadeNome]}</td>
         <td>${formatarNumero(item.novos)}</td>
         <td>${formatarNumero(item.rematricula)}</td>
