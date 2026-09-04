@@ -189,7 +189,7 @@ table {
     border-spacing: 0 1px;
     table-layout: fixed;
 
-    font-size: clamp(9px, 2.35vw, 22px);
+    font-size: clamp(8px, 2.35vw, 22px);
 
     background: rgba(255, 255, 255, 0.50);
     border-radius: 9px;
