@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-03T20:38:08.884911-03:00",
+  "gerado_em": "2026-09-04T06:25:10.983505-03:00",
   "dados": [
     {
       "EscolaCod": "13421|501",
@@ -20,7 +20,7 @@
       "Campo": "MIBES",
       "Unidade": "ULB-MIBES-CADE",
       "Novos": 5,
-      "Rematricula": 127
+      "Rematricula": 132
     },
     {
       "EscolaCod": "4022|1501",
@@ -34,7 +34,7 @@
       "Campo": "MBSO",
       "Unidade": "ULB-MBSO-CAVC",
       "Novos": 3,
-      "Rematricula": 121
+      "Rematricula": 122
     },
     {
       "EscolaCod": "4022|701",
@@ -62,7 +62,7 @@
       "Campo": "ABS",
       "Unidade": "ULB-ABS-CADI",
       "Novos": 2,
-      "Rematricula": 77
+      "Rematricula": 79
     },
     {
       "EscolaCod": "4222|601",
@@ -83,7 +83,7 @@
       "Campo": "AB",
       "Unidade": "ULB-AB-CALF",
       "Novos": 2,
-      "Rematricula": 59
+      "Rematricula": 62
     },
     {
       "EscolaCod": "4125-1",
@@ -118,7 +118,7 @@
       "Campo": "MIBES",
       "Unidade": "ULB-MIBES-EATF",
       "Novos": 0,
-      "Rematricula": 33
+      "Rematricula": 35
     },
     {
       "EscolaCod": "4822|1301",
