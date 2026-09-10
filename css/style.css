@@ -1,9 +1,9 @@
 * {
     box-sizing: border-box;
 }
-
+/*
 :root {
-    /* Ajustes independentes dos 3 primeiros colocados 
+     Ajustes independentes dos 3 primeiros colocados 
     --top-1-font-size: 1.10em;
     --top-2-font-size: 1.07em;
     --top-3-font-size: 1.05em;
@@ -15,9 +15,9 @@
     --top-1-badge-size: 3.15em;
     --top-2-badge-size: 2.95em;
     --top-3-badge-size: 2.85em;
-    */
+    
 }
-
+*/
 html,
 body {
     margin: 0;
