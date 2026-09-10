@@ -3,7 +3,7 @@
 }
 
 :root {
-    /* Ajustes independentes dos 3 primeiros colocados */
+    /* Ajustes independentes dos 3 primeiros colocados 
     --top-1-font-size: 1.10em;
     --top-2-font-size: 1.07em;
     --top-3-font-size: 1.05em;
@@ -15,6 +15,7 @@
     --top-1-badge-size: 3.15em;
     --top-2-badge-size: 2.95em;
     --top-3-badge-size: 2.85em;
+    */
 }
 
 html,
@@ -59,105 +60,7 @@ body {
    BOTÃO TELA CHEIA
    ========================================================= */
 
-.btn-fullscreen {
-    position: absolute;
-    top: 2.3%;
-    right: 5%;
-    z-index: 30;
 
-    width: 3em;
-    height: 3em;
-    padding: 0;
-
-    display: grid;
-    place-items: center;
-
-    border: 1px solid rgba(255, 255, 255, 0.72);
-    border-radius: 14px;
-
-    background: rgba(255, 255, 255, 0.82);
-    color: #11346f;
-
-    cursor: pointer;
-
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-
-    box-shadow:
-        0 5px 14px rgba(0, 0, 0, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.80);
-
-    animation: fullscreen-hint 1.65s cubic-bezier(.2, .75, .35, 1) 1;
-
-    transition:
-        transform 160ms ease,
-        background 160ms ease,
-        box-shadow 160ms ease;
-}
-
-.btn-fullscreen:hover {
-    transform: scale(1.08);
-    background: rgba(255, 255, 255, 0.94);
-    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.20);
-}
-
-.btn-fullscreen:active {
-    transform: scale(0.96);
-}
-
-.fullscreen-icon {
-    position: absolute;
-
-    width: 1.55em;
-    height: 1.55em;
-
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-
-    transition:
-        opacity 160ms ease,
-        transform 220ms ease;
-}
-
-.fullscreen-exit {
-    opacity: 0;
-    transform: scale(0.78);
-}
-
-.btn-fullscreen.is-fullscreen .fullscreen-enter {
-    opacity: 0;
-    transform: scale(1.18);
-}
-
-.btn-fullscreen.is-fullscreen .fullscreen-exit {
-    opacity: 1;
-    transform: scale(1);
-}
-
-@keyframes fullscreen-hint {
-    0%, 100% {
-        transform: scale(1);
-    }
-
-    17% {
-        transform: scale(2.22);
-    }
-
-    34% {
-        transform: scale(1);
-    }
-
-    52% {
-        transform: scale(2.22);
-    }
-
-    70% {
-        transform: scale(1);
-    }
-}
 
 
 /* =========================================================
@@ -171,12 +74,12 @@ body {
 
 .ranking-unidades {
     top: 22.2%;
-    left: 5.9%;
-    width: 88.2%;
+    left: 6.4%;
+    width: 87.3%;
 }
 
 .ranking-campos {
-    top: 74.2%;
+    top: 77.9%;
     left: 8%;
     width: 84%;
 }
@@ -189,7 +92,7 @@ table {
     border-spacing: 0 1px;
     table-layout: fixed;
 
-    font-size: clamp(8px, 2.35vw, 22px);
+    font-size: clamp(8px, 2.8vw, 26px);
 
     background: rgba(255, 255, 255, 0.50);
     border-radius: 9px;
@@ -214,7 +117,7 @@ th {
 }
 
 td {
-    height: 1.28em;
+    height: 1.5em;
     padding: 0.07em 0.35em;
 }
 
@@ -225,7 +128,7 @@ td {
 }
 
 .col-nome {
-    width: 25%;
+    width: 23%;
     text-align: left;
 }
 
@@ -234,19 +137,19 @@ td {
 }
 
 .col-rematricula {
-    width: 15%;
+    width: 14%;
 }
 
 .col-total {
-    width: 11%;
-}
-
-.col-meta {
     width: 13%;
 }
 
-.col-percentual {
+.col-meta {
     width: 16%;
+}
+
+.col-percentual {
+    width: 14%;
 }
 
 td.nome {
