@@ -77,30 +77,47 @@ function calcularRazao(percentualMeta, dataAtual) {
    GRADIENTE
    ========================================================= */
 
-function corGradiente(razao) {
-    const vermelho = [248, 218, 215];
-    const amarelo = [250, 239, 194];
-    const verde = [214, 237, 217];
-
-    let inicio;
-    let fim;
-    let t;
-
-    if (razao <= 0.5) {
-        inicio = vermelho;
-        fim = amarelo;
-        t = razao / 0.5;
-    } else {
-        inicio = amarelo;
-        fim = verde;
-        t = (razao - 0.5) / 0.5;
+function definirCorLinha(percentualMeta, razao) {
+    if (percentualMeta >= 40) {
+        return "rgb(218, 235, 248)";
     }
 
+    return corGradiente(razao);
+}
+
+function interpolarCor(inicio, fim, t) {
     const rgb = inicio.map(
-        (valor, i) => Math.round(valor + (fim[i] - valor) * t)
+        (valor, i) =>
+            Math.round(
+                valor + (fim[i] - valor) * t
+            )
     );
 
     return `rgb(${rgb.join(",")})`;
+}
+
+function corGradiente(razao) {
+    if (razao < 0.5) {
+        return interpolarCor(
+            [255, 206, 195],
+            [255, 227, 195],
+            razao / 0.5
+        );
+    }
+
+    if (razao < 0.8) {
+        return interpolarCor(
+            [255, 234, 195],
+            [252, 248, 199],
+            (razao - 0.5) / 0.3
+        );
+    }
+
+    return interpolarCor(
+        [248, 248, 200],
+        [214, 237, 217],
+        (razao - 0.8) / 0.2
+    );
 }
 
 
@@ -260,7 +277,7 @@ function criarLinha(
     if (usarGradiente) {
         tr.style.setProperty(
             "--cor-linha",
-            corGradiente(item.razao)
+            definirCorLinha(item.percentualMeta, item.razao)
         );
     }
 
