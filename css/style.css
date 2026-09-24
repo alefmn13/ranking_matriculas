@@ -79,7 +79,7 @@ body {
 }
 
 .ranking-campos {
-    top: 77.9%;
+    top: 77.4%;
     left: 8%;
     width: 84%;
 }
@@ -92,7 +92,7 @@ table {
     border-spacing: 0 1px;
     table-layout: fixed;
 
-    font-size: clamp(8px, 2.8vw, 26px);
+    font-size: clamp(8px, 2.9vw, 26.9px);
 
     background: rgba(255, 255, 255, 0.50);
     border-radius: 9px;
