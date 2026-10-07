@@ -80,7 +80,7 @@ function calcularRazao(percentualMeta, dataAtual) {
    GRADIENTE
    ========================================================= */
 
-const THRESHOLD_1 = 0.6;
+const THRESHOLD_1 = 0.5;
 const THRESHOLD_2 = 1.0;
 
 const COR_FAIXA_1_INICIO = "#EDA1A1";
