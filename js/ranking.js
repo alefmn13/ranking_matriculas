@@ -50,12 +50,15 @@ function diferencaDias(data1, data2) {
 
 
 function calcularEsperado(dataAtual) {
-    const dataFinal = new Date(2026, 8, 30);
+    const dataInicial = new Date(2026, 8, 1);
+    const dataFinal = new Date(2026, 9, 19);
 
-    const diasRestantes = diferencaDias(dataAtual, dataFinal);
-    const diasDecorridos = 30 - diasRestantes;
+    const diasTotais = diferencaDias(dataInicial, dataFinal);
+    const diasDecorridos = diferencaDias(dataInicial, dataAtual);
 
-    return diasDecorridos * 1.333333333333334;
+    const progressoTempo = diasDecorridos / diasTotais;
+
+    return 60 * progressoTempo;
 }
 
 
@@ -77,47 +80,72 @@ function calcularRazao(percentualMeta, dataAtual) {
    GRADIENTE
    ========================================================= */
 
+const THRESHOLD_1 = 0.6;
+const THRESHOLD_2 = 1.0;
+
+const COR_FAIXA_1_INICIO = "#EDA1A1";
+const COR_FAIXA_1_FIM    = "#FFF1C4";
+
+const COR_FAIXA_2_INICIO = "#FFF2B8";
+const COR_FAIXA_2_FIM    = "#E5F5BA";
+
+const COR_FAIXA_3 = "#D3F2D8";
+
+
 function definirCorLinha(percentualMeta, razao) {
-    if (percentualMeta >= 40) {
+    if (percentualMeta >= 60) {
         return "rgb(218, 235, 248)";
     }
 
     return corGradiente(razao);
 }
 
+
+function hexParaRgb(hex) {
+    const valor = hex.replace("#", "");
+
+    return [
+        parseInt(valor.slice(0, 2), 16),
+        parseInt(valor.slice(2, 4), 16),
+        parseInt(valor.slice(4, 6), 16)
+    ];
+}
+
+
 function interpolarCor(inicio, fim, t) {
-    const rgb = inicio.map(
+    const rgbInicio = hexParaRgb(inicio);
+    const rgbFim = hexParaRgb(fim);
+
+    const rgb = rgbInicio.map(
         (valor, i) =>
             Math.round(
-                valor + (fim[i] - valor) * t
+                valor + (rgbFim[i] - valor) * t
             )
     );
 
     return `rgb(${rgb.join(",")})`;
 }
 
+
 function corGradiente(razao) {
-    if (razao < 0.5) {
+    if (razao < THRESHOLD_1) {
         return interpolarCor(
-            [255, 206, 195],
-            [255, 227, 195],
-            razao / 0.5
+            COR_FAIXA_1_INICIO,
+            COR_FAIXA_1_FIM,
+            razao / THRESHOLD_1
         );
     }
 
-    if (razao < 0.8) {
+    if (razao < THRESHOLD_2) {
         return interpolarCor(
-            [255, 234, 195],
-            [252, 248, 199],
-            (razao - 0.5) / 0.3
+            COR_FAIXA_2_INICIO,
+            COR_FAIXA_2_FIM,
+            (razao - THRESHOLD_1)
+            / (THRESHOLD_2 - THRESHOLD_1)
         );
     }
 
-    return interpolarCor(
-        [248, 248, 200],
-        [214, 237, 217],
-        (razao - 0.8) / 0.2
-    );
+    return COR_FAIXA_3;
 }
 
 
