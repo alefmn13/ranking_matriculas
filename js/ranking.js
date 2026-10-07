@@ -84,12 +84,12 @@ const THRESHOLD_1 = 0.6;
 const THRESHOLD_2 = 1.0;
 
 const COR_FAIXA_1_INICIO = "#EDA1A1";
-const COR_FAIXA_1_FIM    = "#FFF1C4";
+const COR_FAIXA_1_FIM    = "#FFE1B8";
 
-const COR_FAIXA_2_INICIO = "#FFF2B8";
-const COR_FAIXA_2_FIM    = "#E5F5BA";
+const COR_FAIXA_2_INICIO = "#FFE9AB";
+const COR_FAIXA_2_FIM    = "#E0F7C3";
 
-const COR_FAIXA_3 = "#D3F2D8";
+const COR_FAIXA_3 = "#DAF2D3";
 
 
 function definirCorLinha(percentualMeta, razao) {
