@@ -51,14 +51,14 @@ function diferencaDias(data1, data2) {
 
 function calcularEsperado(dataAtual) {
     const dataInicial = new Date(2026, 8, 1);
-    const dataFinal = new Date(2026, 9, 19);
+    const dataFinal = new Date(2026, 10, 30);
 
     const diasTotais = diferencaDias(dataInicial, dataFinal);
     const diasDecorridos = diferencaDias(dataInicial, dataAtual);
 
     const progressoTempo = diasDecorridos / diasTotais;
 
-    return 60 * progressoTempo;
+    return 80 * progressoTempo;
 }
 
 
@@ -83,17 +83,17 @@ function calcularRazao(percentualMeta, dataAtual) {
 const THRESHOLD_1 = 0.5;
 const THRESHOLD_2 = 1.0;
 
-const COR_FAIXA_1_INICIO = "#EDA1A1";
-const COR_FAIXA_1_FIM    = "#FFE1B8";
+const COR_FAIXA_1_INICIO = "#E67A7A";
+const COR_FAIXA_1_FIM    = "#F2BF91";
 
-const COR_FAIXA_2_INICIO = "#FFF2AB";
-const COR_FAIXA_2_FIM    = "#E5FACF";
+const COR_FAIXA_2_INICIO = "#FCDB7E";
+const COR_FAIXA_2_FIM    = "#E6F7C8";
 
-const COR_FAIXA_3 = "#DAF2D3";
+const COR_FAIXA_3 = "#D3F2C9";
 
 
 function definirCorLinha(percentualMeta, razao) {
-    if (percentualMeta >= 60) {
+    if (percentualMeta >= 80) {
         return "rgb(218, 235, 248)";
     }
 
